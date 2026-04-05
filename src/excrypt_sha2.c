@@ -70,6 +70,10 @@ on big-endian systems and for his assistance with corrections
 #include <string.h>         /* for memcpy() etc.        */
 #include "excrypt.h"
 
+#ifndef min
+#define min(a,b) ((a) < (b) ? (a) : (b))
+#endif
+
 #if defined( _MSC_VER ) && ( _MSC_VER > 800 )
 #pragma intrinsic(memcpy)
 #pragma intrinsic(memset)
